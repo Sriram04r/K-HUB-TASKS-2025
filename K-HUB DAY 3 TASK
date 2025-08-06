@@ -1,0 +1,142 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/K-HUB-TASKS-2025/blob/main/K-HUB%20DAY%203%20TASK\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D3WVk55Si0Kq",
+        "outputId": "218f9626-71a6-4857-eab5-e939d7703d3b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What would you like? (espresso/latte/cappuccino): latte\n",
+            "Insert the coins\n",
+            "How many 10s are:60\n",
+            "How many 5s are:1\n",
+            "How many 2s are:0\n",
+            "Here is ₹560 as change.\n",
+            "Here is your latte. Enjoy\n"
+          ]
+        }
+      ],
+      "source": [
+        "menu = {\n",
+        "    \"espresso\": {\n",
+        "        \"ingredients\":{\"water\":100,\"milk\":50},\n",
+        "        \"cost\":27\n",
+        "    },\n",
+        "    \"latte\":{\n",
+        "        \"ingredients\": {\"water\":200,\"milk\":150,\"coffee\":24},\n",
+        "        \"cost\":45\n",
+        "    },\n",
+        "    \"cappuccino\":{\n",
+        "        \"ingredients\":{\"water\":250,\"milk\":200,\"coffee\":24},\n",
+        "        \"cost\":55\n",
+        "    },\n",
+        "    }\n",
+        "\n",
+        "    # Existing Resources\n",
+        "\n",
+        "resources = {\n",
+        "        'water':350,\n",
+        "        'milk':250,\n",
+        "        'coffee':50,\n",
+        "        'money': 0\n",
+        "    }\n",
+        "\n",
+        "    # Check if Enough Ingredients Are Available\n",
+        "\n",
+        "def is_resource_sufficient(order_ingredients):\n",
+        "    for item in order_ingredients:\n",
+        "        if item not in resources or order_ingredients[item] > resources[item]:\n",
+        "            print(f\"sorry there is no enough {item}\")\n",
+        "            return False\n",
+        "    return True\n",
+        "\n",
+        "   # Ask the user to insert coins\n",
+        "\n",
+        "def insert_coins():\n",
+        "    print('Insert the coins')\n",
+        "    ten = int(input('How many 10s are:'))\n",
+        "    five = int(input('How many 5s are:'))\n",
+        "    two = int(input('How many 2s are:'))\n",
+        "    total = (ten * 10) + (five * 5) + (two * 2)\n",
+        "    return total\n",
+        "\n",
+        "def is_transaction_successful(payment, cost):\n",
+        "    if payment < cost:\n",
+        "        print(\"Not enough money. Money refunded.\")\n",
+        "        return False\n",
+        "    elif payment >= cost: # Changed > to >= to handle exact payment\n",
+        "        change = payment - cost\n",
+        "        if change > 0:\n",
+        "            print(f\"Here is ₹{change} as change.\")\n",
+        "    # Add the cost to total money\n",
+        "    resources[\"money\"] += cost\n",
+        "    return True\n",
+        "\n",
+        "def make_coffee(drink_name, ingredients):\n",
+        "     for item in ingredients:\n",
+        "        resources[item] -= ingredients[item]\n",
+        "     print(f\"Here is your {drink_name}. Enjoy\")\n",
+        "\n",
+        "\n",
+        "is_on = True\n",
+        "\n",
+        "while is_on:\n",
+        "    choice = input(\"What would you like? (espresso/latte/cappuccino): \").lower()\n",
+        "\n",
+        "    if choice == \"off\":\n",
+        "        is_on = False\n",
+        "\n",
+        "    elif choice == \"report\":\n",
+        "        print(f\"Water: {resources['water']}ml\")\n",
+        "        print(f\"Milk: {resources['milk']}ml\")\n",
+        "        print(f\"Coffee: {resources['coffee']}g\")\n",
+        "        print(f\"Money: ₹{resources['money']}\")\n",
+        "\n",
+        "    elif choice in menu:\n",
+        "        drink = menu[choice]\n",
+        "        if is_resource_sufficient(drink[\"ingredients\"]):\n",
+        "            payment = insert_coins() # Changed from process_coins_rupees to insert_coins\n",
+        "            if is_transaction_successful(payment, drink[\"cost\"]):\n",
+        "                make_coffee(choice, drink[\"ingredients\"])\n",
+        "    else:\n",
+        "        print(\"Invalid input. Please choose espresso, latte, or cappuccino.\")"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPhB2zLCMWEABscyDAdSk85",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
