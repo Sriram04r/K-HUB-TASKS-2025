@@ -1,0 +1,1070 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMP5GeBwTKP9NWQAVZVGrnm",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/K-HUB-TASKS-2025/blob/main/K-HUB%20TASK%20%206\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "pm8FWLwoX231"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# OOPS IN  PYTHON"
+      ],
+      "metadata": {
+        "id": "e53p0qqrX6-c"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "OOP stands for object Oriented Programming.We have to know about what is oop and why it useful in python and advantages of oop."
+      ],
+      "metadata": {
+        "id": "gJBgTtQZX_U0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "what is oop?\n",
+        "\n",
+        "     python is an  object Oriented Programming.it allows you to structure your code using classes and objects."
+      ],
+      "metadata": {
+        "id": "bIkEHD5YYXbN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "why oops in python?\n",
+        "\n",
+        "    It contains code reusable.make large problems easier to manage and organise code in to logical units."
+      ],
+      "metadata": {
+        "id": "rXi73KPzY6jO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Advantages\n",
+        "\n",
+        "   1.Reuse and Debug is easy.\n",
+        "   2.It provides clear structure.\n",
+        "   3.Keep your code DRY(Don't Repeat yourself)."
+      ],
+      "metadata": {
+        "id": "C0NZtaQQZVI4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# CLASSES AND OBJECTS"
+      ],
+      "metadata": {
+        "id": "RAEiBflXgdAs"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "class is a blue print (or) templates for creating objects.\"class\" keyword is used to create a class.\"Object\" is base class in python.python constructor is defined with __init__() method.Python doesn't support multiple constructor in a single class."
+      ],
+      "metadata": {
+        "id": "3l_nWO3Ggmdg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Ram:\n",
+        "  print('This is Sri')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SMdU3gwQhbrX",
+        "outputId": "e7da4368-97ab-4bcd-88ea-5f33a5602e56"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is Sri\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Ram:\n",
+        "  print('This is Sri')\n",
+        "  def display(self):\n",
+        "    a = 4\n",
+        "    b = 7\n",
+        "    print(a,b)\n",
+        "obj = Ram()\n",
+        "obj.display()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tdP0PUDXh67X",
+        "outputId": "5b2c83fe-36ea-4a71-e144-b38fa146f66f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is Sri\n",
+            "4 7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**The __init__() Method**"
+      ],
+      "metadata": {
+        "id": "F-J9wmipxd5j"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The __init__() method in Python is called the constructor.\n",
+        "It’s a special method that runs automatically whenever you create a new object from a class.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "5XnRj662xmgA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Using __init__() method\n",
+        "\n",
+        "class Car:\n",
+        "  def __init__(self,Toyota,Honda):\n",
+        "    self.Toyota = Toyota\n",
+        "    self.Honda = Honda\n",
+        "obj = Car('Innova','Honda city')\n",
+        "print(obj)\n",
+        "print(obj)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xSIAx2Gtlo24",
+        "outputId": "6aa6ddf3-a7b2-438c-d5b3-7a028c337e09"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<__main__.Car object at 0x7c0d6e2895d0>\n",
+            "<__main__.Car object at 0x7c0d6e2895d0>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Food:\n",
+        "  def __init__(self,Breakfast,lunch,Dinner):\n",
+        "    self.Breakfast = Breakfast\n",
+        "    self.lunch = lunch\n",
+        "    self.Dinner = Dinner\n",
+        "obj = Food('Dosa','Chicken','Curd rice')\n",
+        "print(obj.Breakfast)\n",
+        "print(obj.lunch)\n",
+        "print(obj.Dinner)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FF8yGeadnQhS",
+        "outputId": "1fb3aa12-452a-4c1e-d3b8-f24b468cd466"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dosa\n",
+            "Chicken\n",
+            "Curd rice\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Rice:\n",
+        "  def __init__(self,Basmathi,Redrice):\n",
+        "    self.Basmathi = Basmathi\n",
+        "    self.Redrice = Redrice\n",
+        "  def display(self):\n",
+        "    print('Basmathi:',self.Basmathi)\n",
+        "    print('Redrice:',self.Redrice)\n",
+        "obj = Rice('Thalli Bidda','Kerala matta')\n",
+        "obj.display()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GKoz2DoCovKs",
+        "outputId": "6b3c2b73-8bdc-47c3-8a6d-8fafc360375c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Basmathi: Thalli Bidda\n",
+            "Redrice: Kerala matta\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Rice:\n",
+        "  def __init__(self,Basmathi,Redrice):\n",
+        "    self.Basmathi = Basmathi\n",
+        "    self.Redrice = Redrice\n",
+        "  def display(self):\n",
+        "    print('Basmathi:',self.Basmathi)\n",
+        "    print('Redrice:',self.Redrice)\n",
+        "    print('......................')\n",
+        "obj = Rice('Thalli Bidda','Bhutanese')\n",
+        "obj.display()\n",
+        "obj1 = Rice('ZZZ','Kerala matta')\n",
+        "obj1.display()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BB45cd4zrSA2",
+        "outputId": "a5307077-18ec-478b-c1ec-7a9c5e5a2463"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Basmathi: Thalli Bidda\n",
+            "Redrice: Bhutanese\n",
+            "......................\n",
+            "Basmathi: ZZZ\n",
+            "Redrice: Kerala matta\n",
+            "......................\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Here we can use the __init__() method then the objected is created the print statement will be executed.\n",
+        "\n",
+        "class Student:\n",
+        "  def __init__(self):\n",
+        "    print('HI')\n",
+        "    def display(self):\n",
+        "      print('Hello')\n",
+        "obj = Student()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "d6PejUQquKN9",
+        "outputId": "74758b3f-1620-483c-ab26-197d80853d74"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "HI\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**The __str__() method**"
+      ],
+      "metadata": {
+        "id": "tWij3Jo5xHlv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "It’s a special method in Python that defines what should be displayed when you convert an object to a string (e.g., with print()).\n",
+        "\n",
+        "By default, if you print an object without __str__(), Python shows something like:"
+      ],
+      "metadata": {
+        "id": "YEs7m87jxCas"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "    def __init__(self, name, age):\n",
+        "        self.name = name\n",
+        "        self.age = age\n",
+        "\n",
+        "    def __str__(self):\n",
+        "        return (f\"{self.name} is {self.age} years old.\")\n",
+        "\n",
+        "p1 = Person(\"John\", 36)\n",
+        "\n",
+        "print(p1)\n",
+        "print(str(p1))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WS1fpOBKxGA2",
+        "outputId": "248d6944-d810-45f9-fece-ef8c172cdc52"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "John is 36 years old.\n",
+            "John is 36 years old.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Book:\n",
+        "  def __init__(self, Longbook, shortbook):\n",
+        "    self.Longbook = Longbook\n",
+        "    self.shortbook = shortbook\n",
+        "  def display(self):\n",
+        "    return (f\"This is a {self.Longbook} note book and {self.shortbook} note book\")\n",
+        "obj = Book('Classmate','Usha')\n",
+        "print(obj.display())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1voHeSvmyNKP",
+        "outputId": "2f5453e0-e42c-49b4-b920-fb66b1f4d0ee"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is a Classmate note book and Usha note book\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**create methods**"
+      ],
+      "metadata": {
+        "id": "P-An0MO33Kfq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "You can create your own methods inside objects. Methods in objects are functions that belong to the object."
+      ],
+      "metadata": {
+        "id": "dmqhJ54b3OMg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(self, name, age):\n",
+        "    self.name = name\n",
+        "    self.age = age\n",
+        "\n",
+        "  def myfunc(self):\n",
+        "    print(\"Hello my name is \" + self.name)\n",
+        "    print(\"Hello my age is \" + str(self.age))\n",
+        "\n",
+        "p1 = Person(\"John\", 36)\n",
+        "p1.myfunc()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L6zGC4wp3UXP",
+        "outputId": "f7f1f49e-72e6-459a-ae9e-f1aaacfcb82f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello my name is John\n",
+            "Hello my age is 36\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**create methods**"
+      ],
+      "metadata": {
+        "id": "LytQtB4H5Y9K"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Industry:\n",
+        "  def __init__(self , price):\n",
+        "    self.price = price\n",
+        "  def myfun(self):\n",
+        "    print('The product is ' + str(self.price))\n",
+        "\n",
+        "obj = Industry('BMW')\n",
+        "obj.myfun()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TPlZDXD14E1f",
+        "outputId": "9cc5a879-e7da-445c-c7f9-a1592a716dcb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The product is BMW\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Self parameters**"
+      ],
+      "metadata": {
+        "id": "fevRrLYr7kOt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.\n",
+        "\n",
+        "It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any function in the class"
+      ],
+      "metadata": {
+        "id": "TFreLBU77p3n"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(myjob, name):\n",
+        "    myjob.name = name\n",
+        "\n",
+        "  def myfunc(abc):\n",
+        "    print(\"Hello my name is \" + abc.name)\n",
+        "\n",
+        "p1 = Person(\"Ram\")\n",
+        "p1.myfunc()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vOL6arzC7vnu",
+        "outputId": "b5789aeb-66b4-4c08-a22b-63b40e28b292"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello my name is Ram\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Modify object parameters**"
+      ],
+      "metadata": {
+        "id": "d7oxly7_8GuF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "You can modify properties on object."
+      ],
+      "metadata": {
+        "id": "r_--8XIa8NIO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class India:\n",
+        "  def __init__(self, Andhrapradesh, Telangana):\n",
+        "    self.Andhrapradesh = Andhrapradesh\n",
+        "    self.Telangana = Telangana\n",
+        "\n",
+        "  def myfunc(self):\n",
+        "    print(\"Hello my state is \" + self.Andhrapradesh)\n",
+        "\n",
+        "p1 = Person('chittor')\n",
+        "\n",
+        "p1.Andhrapradesh = 'Konaseema'\n",
+        "\n",
+        "print(p1.Andhrapradesh)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ONqEQ0o58OgK",
+        "outputId": "3c6985ee-5b16-4448-d78c-4dc24c34ccb2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Konaseema\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Delete object parameters**"
+      ],
+      "metadata": {
+        "id": "JkxaNkKP9Paa"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "You can delete properties on object."
+      ],
+      "metadata": {
+        "id": "cmqqIfhe9VeA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(self, name, age):\n",
+        "    self.name = name\n",
+        "    self.age = age\n",
+        "\n",
+        "  def myfunc(self):\n",
+        "    print(\"Hello my name is \" + self.name)\n",
+        "\n",
+        "p1 = Person(\"John\", 36)\n",
+        "\n",
+        "del p1\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "QIF-Wdte9cMJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Pass statement**"
+      ],
+      "metadata": {
+        "id": "F_Crl2NG9-nU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "class definitions cannot be empty, but if you for some reason have a class definition with no content, put in the pass statement to avoid getting an error."
+      ],
+      "metadata": {
+        "id": "caMLfm3M-GbM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  pass"
+      ],
+      "metadata": {
+        "id": "S_uRcoMR-IYL"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# INHERITENCE"
+      ],
+      "metadata": {
+        "id": "Qp_0y8M0V1qw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "We have to use one class methods and properties to another class.The uses of Inheritence is code reusability,Extensibility and Organised structure."
+      ],
+      "metadata": {
+        "id": "CmkO-TqnV47i"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Types of Inheritence**"
+      ],
+      "metadata": {
+        "id": "Z4pq1e2RWcN7"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "There are mainly four types of Inheritences.\n",
+        "\n",
+        "1.Single Inheritence.                     \n",
+        "\n",
+        "2.Multiple Inheritence.              \n",
+        "\n",
+        "3.Multi level Inheritence.               \n",
+        "\n",
+        "4.Hirarchical Inheritence."
+      ],
+      "metadata": {
+        "id": "3Jqo3YFTWkJD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# single Inheritence\n",
+        "\n",
+        "\n",
+        "class parent:\n",
+        "  def fun1(self):\n",
+        "    print('This a parent class')\n",
+        "\n",
+        "class child(parent):\n",
+        "  def fun2(self):\n",
+        "    print('This is a child class')\n",
+        "\n",
+        "obj = child()\n",
+        "obj.fun2()\n",
+        "obj.fun1()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S0qcuHgxXRrI",
+        "outputId": "28ebd33e-e9e8-4f9f-81e1-fbb7a2f0500b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is a child class\n",
+            "This a parent class\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# multilevel  Inheritence\n",
+        "\n",
+        "\n",
+        "class parent():\n",
+        "  def fun1(self):\n",
+        "    print('This is a parent class')\n",
+        "class child(parent):\n",
+        "  def fun2(self):\n",
+        "    print('This a child class')\n",
+        "class Grandchild(child):\n",
+        "  def fun3(self):\n",
+        "    print('This is a Grandchild')\n",
+        "\n",
+        "obj = Grandchild()\n",
+        "obj.fun1()\n",
+        "obj.fun2()\n",
+        "obj.fun3()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sGkKn5q7Yeqn",
+        "outputId": "2ccbe148-e710-4f2b-da55-130d53ffd420"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is a parent class\n",
+            "This a child class\n",
+            "This is a Grandchild\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Hirarchical Inheritence\n",
+        "\n",
+        "\n",
+        "class parent():\n",
+        "  def fun1(self):\n",
+        "    print('This is a parent class')\n",
+        "class child1(parent):\n",
+        "  def fun2(self):\n",
+        "    print('This a child1 class')\n",
+        "class child2(parent):\n",
+        "  def fun3(self):\n",
+        "    print('This is a child2')\n",
+        "\n",
+        "obj = child2()\n",
+        "obj.fun1()\n",
+        "\n",
+        "obj.fun3()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1MY8mu_nbtM0",
+        "outputId": "300090f7-8272-40a5-dc13-fbb4a9c33615"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is a parent class\n",
+            "This is a child2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# multiple Inheritence\n",
+        "\n",
+        "\n",
+        "class Father():\n",
+        "  def fun1(self):\n",
+        "    print('This is a Father  class')\n",
+        "class Mother():\n",
+        "  def fun2(self):\n",
+        "    print('This is a Mother class')\n",
+        "class child(parent,Mother):\n",
+        "  def fun3(self):\n",
+        "    print('This is a child class')\n",
+        "\n",
+        "obj = child()\n",
+        "obj.fun1()\n",
+        "obj.fun2()\n",
+        "obj.fun3()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XkQ1zbehdXY_",
+        "outputId": "9183add5-bcfa-4dbb-f5ce-05d407b64b2e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is a parent class\n",
+            "This is a Mother class\n",
+            "This is a child class\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Using super() keyword\n",
+        "\n",
+        "\n",
+        "class A():\n",
+        "  def __init__(self):\n",
+        "    print('This is class A')\n",
+        "  def fun1(self):\n",
+        "    print('This is a Father  class')\n",
+        "class B(A):\n",
+        "  def __init__(self):\n",
+        "    print('This is class B')\n",
+        "    super().__init__()\n",
+        "  def fun2(self):\n",
+        "    print('This is a Mother class')\n",
+        "obj = B()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CWf8_Mqrfj5Z",
+        "outputId": "64ec4a49-7599-4a34-dc82-86977a31483c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is class B\n",
+            "This is class A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# POLYMORPHISM"
+      ],
+      "metadata": {
+        "id": "nT3l4OrrnwZo"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Polymorphism is a concept in oop which means multiple forms or more than one form.The same function name or method name works in different ways depending on object.Polymorphism means same name, different behavior in Python OOP.\n"
+      ],
+      "metadata": {
+        "id": "j6DZayEbn0iV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.compile time         \n",
+        "Method Overloading       \n",
+        "\n",
+        "\n",
+        "2.Run time                     \n",
+        "method overriding"
+      ],
+      "metadata": {
+        "id": "PjCcuwVBoiYY"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Method Overloading**"
+      ],
+      "metadata": {
+        "id": "vJBDKV9hoysZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the same class and same method name with different parameters."
+      ],
+      "metadata": {
+        "id": "Z_M6WsSio4hw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class A():\n",
+        "  def sum(self,a,b):\n",
+        "    return a + b\n",
+        "    def sum(self,a,b,c):\n",
+        "      return a + b + c\n",
+        "obj = A()\n",
+        "print(obj.sum(1,8))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4DBywrDwpDwT",
+        "outputId": "b92129e6-089b-44dc-94f2-86cca65d646d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Method overriding**"
+      ],
+      "metadata": {
+        "id": "XAxM0C2F4czu"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Different classes with same names and different parameters."
+      ],
+      "metadata": {
+        "id": "_VNR8ntO4lhF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class A():\n",
+        "  def display(self):\n",
+        "   print('This is class A')\n",
+        "class B(A):\n",
+        "  def display(self):\n",
+        "    print('This is class B')\n",
+        "    super().display()\n",
+        "obj = B()\n",
+        "obj.display()\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "av2zr22c5I3J",
+        "outputId": "b69d2560-b5a1-48a8-9fd4-5d6c13f50107"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is class B\n",
+            "This is class A\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
