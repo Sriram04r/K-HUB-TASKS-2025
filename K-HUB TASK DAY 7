@@ -1,0 +1,255 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNvuVzAq4icEzizp9TI9laD",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sriram04r/K-HUB-TASKS-2025/blob/main/K-HUB%20TASK%20DAY%207\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# ENCAPSULATION"
+      ],
+      "metadata": {
+        "id": "guMGVtLwiNK2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "It is nothing but wrapping of variables and methods in a single unit."
+      ],
+      "metadata": {
+        "id": "QEV6e3FfiP8U"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Access specifiers**                 \n",
+        "1.public                       \n",
+        "2.private                      \n",
+        "3.protect"
+      ],
+      "metadata": {
+        "id": "qx2t56xLiaml"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "By using private and protect keywords."
+      ],
+      "metadata": {
+        "id": "REJvQkJoous3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# private and protect in  a single class.\n",
+        "\n",
+        "\n",
+        "class Demo:\n",
+        "  __a = 2\n",
+        "  _b = 3\n",
+        "  print(__a)\n",
+        "  print(_b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B4mqSOL3incG",
+        "outputId": "21ec2c38-7839-4914-dd8d-08dd18ae9e4e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# private doesn't allows a two classes it will only access on a single class,but protect will access in two classes by using __init__() constructor.\n",
+        "\n",
+        "\n",
+        "class Demo:\n",
+        "  def __init__(self, a, b):\n",
+        "    self.__a = a\n",
+        "    self._b = b\n",
+        "class Demo2(Demo):\n",
+        "  def Output(self):\n",
+        "    print(self._b)\n",
+        "obj = Demo2(2, 3)\n",
+        "obj.Output()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QQnkgfkIlehm",
+        "outputId": "185b7bf6-f616-4f9d-81dd-67c735e32854"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "By using **\"public\"** keyword"
+      ],
+      "metadata": {
+        "id": "gjDwSp5cn-Yf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In Python, public means the variables and methods can be accessed from anywhere inside and outside the class."
+      ],
+      "metadata": {
+        "id": "ReQm2tmooaFc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class FilmIndustry:\n",
+        "    def __init__(self, name , movie ):\n",
+        "        self.name = name\n",
+        "        self.movie = movie\n",
+        "\n",
+        "\n",
+        "    def display_info(self):\n",
+        "        print(f\"Blockbuster Hit for {self.name} from {self.movie}\")\n",
+        "\n",
+        "s1 = FilmIndustry(\"power star\", \"OG\")\n",
+        "\n",
+        "print(s1.name)\n",
+        "print(s1.movie)\n",
+        "\n",
+        "\n",
+        "s1.display_info()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LdbRQzrYodZW",
+        "outputId": "7e08e730-1c2c-444e-e512-2f384eae0a2d"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "power star\n",
+            "OG\n",
+            "Blockbuster Hit for power star from OG\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# ABSTRACTION"
+      ],
+      "metadata": {
+        "id": "BwTVvTNosyp_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Abstraction means hiding unnecessary details and showing only the important features to the user.For example A fan is rotating,here implementation is done but how the fan is rotating this is hiding.Abstraction will hiding  the  internal work."
+      ],
+      "metadata": {
+        "id": "x2SzQSE8s1Xf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from abc import ABC, abstractmethod\n",
+        "\n",
+        "class Animal(ABC):\n",
+        "    @abstractmethod\n",
+        "    def make_sound(self):\n",
+        "        pass\n",
+        "\n",
+        "\n",
+        "class Dog(Animal):\n",
+        "    def make_sound(self):\n",
+        "        return \"Woof!\"\n",
+        "\n",
+        "\n",
+        "class Cat(Dog):\n",
+        "    def make_sound(self):\n",
+        "        return \"Meow!\"\n",
+        "\n",
+        "dog = Dog()\n",
+        "cat = Cat()\n",
+        "\n",
+        "print(dog.make_sound())\n",
+        "print(cat.make_sound())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eFxtkuJwtlNC",
+        "outputId": "2d802865-f454-49d2-f3e9-51bb56329ab2"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Woof!\n",
+            "Meow!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
